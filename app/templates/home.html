@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block main %}
-<h1 class="page-header">Lab 7 Starter Code</h1>
-<p class="lead">Use this starter template for your Flask apps as a way to quickly start any new project.<br>
-All you get are these files and mostly barebones HTML/CSS files.</p>
+    <h1 class="page-header">Lab 7 Starter Code</h1>
+    <p class="lead">Use this starter template for your Flask apps as a way to quickly start any new project.<br>
+        All you get are these files and mostly barebones HTML/CSS files.</p>
     <div>
-        <form action="{{ url_for('thumbnails',userid=profile.userid) }}" method="get">
-            <button class="btn btn-sm btn-warning submit-btn" type="submit">GET</button>
+        <form action="{{ url_for('thumbnails') }}" method="get"  enctype="application/json">
+            <button class="btn btn-lg btn-info submit-btn" type="submit">GET</button>
         </form>
     </div>
 {% endblock %}

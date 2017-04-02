@@ -26,8 +26,11 @@ def home():
 def thumbnails():
     #print jsonify(getimageurls())
     #return render_template('home.html')
-    return jsonify({'error':None,'message':'Success','thumbnails':getimageurls()})
+    return jsonify({'error':None, 'message':'Success', 'thumbnails':getimageurls()})
 
+@app.route('/thumbnails/view')
+def thumb_view():
+    return render_template('thumbnails.html')
 ###
 # The functions below should be applicable to all Flask apps.
 ###

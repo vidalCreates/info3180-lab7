@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <p>{{content}}</p>
+
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http) {
+            $http.get("/api/thumbnails")
+                .then(function(response) {
+                    $scope.content = response.data;
+                });
+        });
+    </script>
+
+{% endblock %}
