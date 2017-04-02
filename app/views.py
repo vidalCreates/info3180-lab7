@@ -22,10 +22,11 @@ def home():
     """Render website's home page."""
     return render_template('home.html')
 
-@app.route('/api/thumbnails')
+@app.route('/api/thumbnails', methods=['GET'])
 def thumbnails():
-    print getimageurls()
-    return render_template('home.html')
+    #print jsonify(getimageurls())
+    #return render_template('home.html')
+    return jsonify({'error':None,'message':'Success','thumbnails':getimageurls()})
 
 ###
 # The functions below should be applicable to all Flask apps.
