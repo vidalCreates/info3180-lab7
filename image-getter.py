@@ -21,6 +21,8 @@ if thumbnail_spec and thumbnail_spec['href']:
 
 
 image = """<img src="%s"><br />"""
+images = []
 for img in soup.findAll("img", src=True):
-   print img["src"]
-   print ''
+   images += [img["src"]]
+
+return images
