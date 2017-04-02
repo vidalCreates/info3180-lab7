@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import urlparse
 
-url = "https://www.walmart.com/ip/54649026"
+url = "https://www.google.com.jm/search?q=high+quality+wallpapers&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwiQjPPA4IbTAhXE1CYKHSOnDSgQsAQIFw&biw=1536&bih=744&dpr=1.25"
 result = requests.get(url)
 soup = BeautifulSoup(result.text, "lxml")
 
